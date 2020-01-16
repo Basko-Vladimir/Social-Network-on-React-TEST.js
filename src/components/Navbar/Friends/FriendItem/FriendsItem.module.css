@@ -1,0 +1,16 @@
+
+.friendItem{
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+.friendItem img{
+    width: 40px;
+}
+
+.friendName{
+    color: white;
+    font-size: 12px;
+}
+

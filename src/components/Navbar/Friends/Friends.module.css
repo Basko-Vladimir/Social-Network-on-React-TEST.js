@@ -1,0 +1,21 @@
+
+.friendsBlock{
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.friends {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+.header {
+    color: white;
+    margin: 10px 0 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
