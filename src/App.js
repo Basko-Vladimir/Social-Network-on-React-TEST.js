@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
-import Navbar from "./components/Navbar/Navbar";
+import NavbarContainer from "./components/Navbar/NavbarContainer";
 import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
@@ -14,7 +14,7 @@ const App = () => {
     return (
         <div className='root'>
             <Header/>
-            <Navbar/>
+            <NavbarContainer/>
             <div className="root-content">
                 <Route path='/profile' render={() => <Profile/>}/>
                 <Route path='/dialogs' render={() => <DialogsContainer/>}/>

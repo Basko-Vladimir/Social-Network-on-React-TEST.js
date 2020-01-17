@@ -2,12 +2,17 @@ import store from "./redux/redux-store";
 import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import React from "react";
-import {Provider} from "./StoreContext";
+import App from "./App";
+import {Provider} from "react-redux";
+
+
 
 let rerender = () => {
     ReactDOM.render(
         <BrowserRouter>
-            <Provider store={store}/>
+            <Provider store={store}>
+                <App/>
+            </Provider>
         </BrowserRouter>, document.getElementById('root')
     )
 };
