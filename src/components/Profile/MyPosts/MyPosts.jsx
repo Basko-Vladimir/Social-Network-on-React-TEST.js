@@ -4,7 +4,7 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-    let postsItem = props.profilePage.posts.map(p => <Post message={p.message} likeCounts={p.likeCounts}/>);
+    let postsItem = props.profilePage.posts.map(p => <Post keys={p.id} message={p.message} likeCounts={p.likeCounts}/>);
 
     let onChangePostElement = (event) => {
         let text = event.target.value;

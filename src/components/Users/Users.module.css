@@ -1,0 +1,32 @@
+
+.user{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+
+.userPhoto{
+    width: 75px;
+    height: 100px;
+}
+
+.userDescription{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows:  2fr 2fr;
+    padding: 5px;
+    border: 1px solid dimgrey;
+    background-color: lightblue;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.userDescription div{
+    padding: 10px;
+}
+
+
+.userDescription div:nth-child(even){
+    text-align: right;
+}
