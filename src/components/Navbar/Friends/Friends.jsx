@@ -3,7 +3,7 @@ import styles from "./Friends.module.css";
 import FriendsItem from "./FriendItem/FriendsItem";
 
 const Friends = (props) => {
-    let friendsItem = props.sidebarPage.friends.map( d => <FriendsItem name={d.name} />);
+    let friendsItem = props.sidebarPage.friends.map( d => <FriendsItem key={d.id} name={d.name} />);
     return (
         <div className={styles.friendsBlock}>
             <h4 className={styles.header}>Friends</h4>
