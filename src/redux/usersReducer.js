@@ -9,7 +9,6 @@ let initialStore = {
     totalCount: 0,
     pageSize: 6,
     currentPage: 1
-
 };
 
 const usersReducer = (state = initialStore, action) => {
