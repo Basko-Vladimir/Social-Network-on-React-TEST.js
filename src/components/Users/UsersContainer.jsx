@@ -3,12 +3,12 @@ import Users from './Users';
 import {connect} from 'react-redux';
 import * as axios from 'axios';
 import {
-    followAC,
-    setCurrentPageAC,
-    setTotalCountAC,
-    setUsersAC,
-    toggleIsFetchingAC,
-    unfollowAC
+    follow,
+    setCurrentPage,
+    setTotalCount,
+    setUsers,
+    toggleIsFetching,
+    unfollow
 } from "../../redux/usersReducer";
 import Preloader from "../common/Preloader/Preloader";
 
@@ -58,28 +58,28 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        follow: (userId) => {
-            dispatch(followAC(userId));
-        },
-        unfollow: (userId) => {
-            dispatch(unfollowAC(userId));
-        },
-        setUsers: (users) => {
-            dispatch(setUsersAC(users));
-        },
-        setTotalCount: (totalCount) => {
-            dispatch(setTotalCountAC(totalCount));
-        },
-        setCurrentPage: (currentPage) => {
-            dispatch(setCurrentPageAC(currentPage));
-        },
-        toggleIsFetching: (isFetching) => {
-            dispatch(toggleIsFetchingAC(isFetching));
-        }
-
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersAPI);
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         follow: (userId) => {
+//             dispatch(followAC(userId));
+//         },
+//         unfollow: (userId) => {
+//             dispatch(unfollowAC(userId));
+//         },
+//         setUsers: (users) => {
+//             dispatch(setUsersAC(users));
+//         },
+//         setTotalCount: (totalCount) => {
+//             dispatch(setTotalCountAC(totalCount));
+//         },
+//         setCurrentPage: (currentPage) => {
+//             dispatch(setCurrentPageAC(currentPage));
+//         },
+//         toggleIsFetching: (isFetching) => {
+//             dispatch(toggleIsFetchingAC(isFetching));
+//         }
+//
+//     }
+// };
+export default connect(mapStateToProps, {
+    follow, unfollow, setUsers, setTotalCount, setCurrentPage, toggleIsFetching})(UsersAPI);
