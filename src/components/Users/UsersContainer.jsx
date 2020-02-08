@@ -12,7 +12,6 @@ import {
 } from "../../redux/usersReducer";
 import Preloader from "../common/Preloader/Preloader";
 
-
 class UsersAPI extends React.Component {
     componentDidMount() {
         this.props.setCurrentPage(1);
