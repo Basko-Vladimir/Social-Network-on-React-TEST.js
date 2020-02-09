@@ -1,4 +1,28 @@
 
 .avaDescription{
     padding:10px;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+.profileName{
+    vertical-align: top;
+    padding: 0 0 0 20px;
+    font-size: 30px;
+    font-weight: bold;
+    height: 70%;
+}
+
+.aboutProfile {
+    padding: 0 0 0 20px;
+    vertical-align: bottom;
+}
+
+.jobText {
+    padding: 0 0 0 20px;
+    color: black;
+    }
+
+.jobSmile {
+    width:30px;
 }

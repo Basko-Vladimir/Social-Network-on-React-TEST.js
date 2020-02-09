@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Users.module.css"
 import userPhoto from "../../assets/images/user.png"
+import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
 
@@ -22,25 +23,27 @@ let Users = (props) => {
                     )
                 }
             </div>
-            {props.users.map(el =>
-                <div key={el.id} className={styles.user}>
+            {props.users.map(u =>
+                <div key={u.id} className={styles.user}>
                     <div>
                         <div>
-                            <img src={el.photos.small !== null ? el.photos.small : userPhoto} alt="photo"
+                            <NavLink to={'/Profile/' + u.id}>
+                                <img src={u.photos.small !== null ? u.photos.small : userPhoto} alt="photo"
                                  className={styles.userPhoto}/>
+                            </NavLink>
                             <div>
-                                {el.followed
-                                    ? <button onClick={() => {props.follow(el.id)}}>Follow</button>
-                                    : <button onClick={() => {props.unfollow(el.id)}}>unFollow</button>
+                                {u.followed
+                                    ? <button onClick={() => {props.follow(u.id)}}>Follow</button>
+                                    : <button onClick={() => {props.unfollow(u.id)}}>unFollow</button>
                                 }
                             </div>
                         </div>
                     </div>
                     <div className={styles.userDescription}>
-                        <div>{el.name}</div>
-                        <div>{'el.location.country'},</div>
-                        <div>{el.status}</div>
-                        <div>{'el.location.city'}</div>
+                        <div>{u.name}</div>
+                        <div>{'u.location.country'},</div>
+                        <div>{u.status}</div>
+                        <div>{'u.location.city'}</div>
                     </div>
                 </div>)}
         </div>)
