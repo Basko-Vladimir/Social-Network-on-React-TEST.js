@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from "./components/Header/Header";
 import NavbarContainer from "./components/Navbar/NavbarContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import News from "./components/News/News";
@@ -9,12 +8,13 @@ import Settings from "./components/Settings/Settings";
 import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UserContainer from "./components/Users/UsersContainer";
+import HeaderContainer from "./components/Header/HeadContainer";
 
 
 const App = () => {
     return (
         <div className='root'>
-            <Header/>
+            <HeaderContainer/>
             <NavbarContainer/>
             <div className="root-content">
                 <Route path='/profile' render={() => <ProfileContainer/>}/>
